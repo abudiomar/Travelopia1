@@ -35,7 +35,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    zoom: 75%;
     background: #121212;
     overflow-x: hidden;
 }
