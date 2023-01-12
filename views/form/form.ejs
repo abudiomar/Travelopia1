@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelopia</title>
+
+
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="stylesheet/form.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <i
+                class="fas fa-paper-plane"></i>Travelopia
+        </a>
+
+        <nav class="navbar">
+            <a data-aos="zoom-in-left" data-aos-delay="300" href="/">home</a>
+            <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">about</a>
+            <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination">destination</a>
+            <a data-aos="zoom-in-left" data-aos-delay="750" href="#services">services</a>
+            <a data-aos="zoom-in-left" data-aos-delay="900" href="#gallery">gallery</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs">blogs</a>
+        </nav>
+
+        <a data-aos="zoom-in-left" data-aos-delay="1300" href="#book-form" class="btn">book now</a>
+
+    </header>
+
+    <!-- header section ends -->
+    <!-- booking form section starts  -->
+
+    <section class="book-form" id="book-form">
+        <form method="POST" name="google-sheet">
+            <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+                <span>Name</span>
+                <input type="text" placeholder="place name" name="name" value="">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+                <span>Number</span>
+                <input type="number" class="inputBox" name="number" value="">
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+                <span>Email</span>
+                <input type="email" placeholder="Place email" name="email" value="">
+            </div>
+
+            <input data-aos=" zoom-in" id="sub" data-aos-delay="600" type="submit" value="Enquire" class="btn">
+        </form>
+
+    </section>
+
+    <!-- booking form section ends -->
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyYR94g9-HyyBjcssn6tANAfmdCPr7_ECQyJzxJSfpTAiL2pgJNgln7KCqdea7GP-Qx/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        });
+
+    </script>
+
+</body>
+
+</html>
