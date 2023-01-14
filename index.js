@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/studyabroad', (req, res) => {
-    res.render('Study')
+    res.render('services/study')
 })
 
 app.get('/canada', (req, res) => {

@@ -15,7 +15,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 45%;
     /* overflow-x: hidden; */
     scroll-behavior: smooth;
     scroll-padding-top: 9rem;
@@ -100,9 +100,9 @@ section {
 
 .travel {
     position: relative;
-    height: 90px;
-    width: 220px;
-    top: 5px;
+    height: 3.5em;
+    width: 8em;
+    top: 0px;
     left: 10px;
     bottom: 40px;
 }
