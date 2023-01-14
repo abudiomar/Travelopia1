@@ -15,7 +15,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 45%;
     /* overflow-x: hidden; */
     scroll-behavior: smooth;
     scroll-padding-top: 9rem;
@@ -91,14 +91,35 @@ section {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 1.5rem 9%;
+    padding: 0px 9% 0px;
+}
+
+.travel {
+
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 250px;
+}
+
+.travel2 {
+    /* position: relative;
+    height: 3.5em;
+    width: 9em;
+    top: 0px;
+    left: 10px;
+    bottom: 40px; */
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 250px;
 }
 
 .header .navbar a {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     color: #aaa;
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0 2rem;
 }
 
 .header .navbar a:hover {
